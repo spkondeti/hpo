@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Home Page Optometrist</title>
+</head>
+<style>
+    body {background-color:  #222233;
+    }
+</style>
+<h1 style="color:#AACCFF" align="left">Home Page Optometrist</h1>
+<p style="color:#AACCFF">TODO</p>
+
+<form method="GET" action="{{ url_for("view_page") }}">
+    <input type="text" name="url" size="40">
+    <input type="submit" value="Submit">
+</form>
+
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+        <h4 style="color:#ff0000"><b>{{ message }}</b></h4>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+
+
+
+<h4 style="color:#AACCFF">
+    This Application takes in a web address, finds a person's profile picture and draws eyeglasses over the person's face
+</h4>
+<ul style="color:#AACCFF">
+    <li>
+        <h4><u>NOTE:</u></h4>
+        <ul>
+            <li>URLs without http or https tag are not valid</li>
+            <li>URLs to social networks like facebook, twitter, reddit etcetera are not valid</li>
+            <li>IP addresses/localhosts are valid</li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>
