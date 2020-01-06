@@ -16,10 +16,6 @@ def view_page():
         req = urllib.request.Request(url)
         req.add_header('Referer', 'http://www.python.org/')
         req.add_header('User-Agent', 'PurdueUniversityClassProject/1.0 (skondeti@purdue.edu https://goo.gl/dk8u5S)')
-        # Credit: Adapted from example in Python 3.4 Documentation, urllib.request
-        #         License: PSFL https://www.python.org/download/releases/3.4.1/license/
-        #                  https://docs.python.org/3.4/library/urllib.request.html
-        #Lines 15,16,17 are extracted from this source
         response = urllib.request.urlopen(req).read()   #Reading Bytes
         response = response.decode("UTF-8")           #Converting Bytes to String
         base_string = "<base href=%s>\n" %url
