@@ -7,4 +7,3 @@ def get_image_info(filename):
     dim_dict["w"] = width
     dim_dict["h"] = height
     print(dim_dict)
-get_image_info("mike.jpeg")
