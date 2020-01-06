@@ -83,9 +83,3 @@ def pushd_temp_dir(base_dir=None, prefix="tmp.hpo."):
 if __name__ == '__main__':
     app.secret_key = "random_key" #Random key to run flash message system
     app.run(host="127.0.0.1", port=os.environ.get("ECE364_HTTP_PORT", 8000),use_reloader=True, use_evalex=False, debug=True, use_debugger=False)
-    # Each student has their own port, which is set in an environment variable.
-    # When not on ecegrid, the port defaults to 8000.  Do not change the host,
-    # use_evalex, and use_debugger parameters.  They are required for security.
-    #
-    # Credit:  Alex Quinn.  Used with permission.  Preceding line only.
-    # Line 32 is extracted from this source
